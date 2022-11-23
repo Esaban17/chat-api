@@ -58,6 +58,11 @@ app.use('/upload', UploadRoute)
 app.use('/chat', ChatRoute)
 app.use('/message', MessageRoute)
 
+app.get("/", (req, res) => {
+  res.send("Hola Mundo!!")
+})
+
+
 app.listen(app.get('port'), () => {
   console.log(`Server Running On Port ${app.get('port')}`);
 });
